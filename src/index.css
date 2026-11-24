@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+  }
+}
+
+/* Custom subtle scrollbars inside mobile frame */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ACNH subtle polka-dot & gingham textures */
+.acnh-dot-bg {
+  background-color: #F8F5EC;
+  background-image: radial-gradient(#E7DEC9 1.35px, transparent 1.35px);
+  background-size: 16px 16px;
+}
+
+.acnh-stage-bg {
+  background: radial-gradient(circle at 50% 35%, #FFFDF9 0%, #F7F1E1 68%, #EFE6D0 100%);
+}
+
+.acnh-flatlay-bg {
+  background-color: #FFFDF9;
+  background-image:
+    linear-gradient(to right, rgba(229, 218, 197, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 218, 197, 0.35) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.acnh-pill-press {
+  transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.16s ease;
+}
+.acnh-pill-press:active {
+  transform: translateY(2px) scale(0.97);
+}
