@@ -1,65 +1,50 @@
-# 29CM x Cozy Fitting Room (모동숲 감성 아바타 피팅룸 & #추구미 피드)
 
-29CM 쇼핑몰의 미니멀 에디토리얼 UX에 **모여봐요 동물의 숲(ACNH)** 감성의 2.5등신 아바타 피팅룸과 `#추구미` 코디 공유 피드를 결합한 모바일 웹앱 프로토타입(제안용 시안)입니다.
+# TypeScript
 
-외부 이미지 URL과 기본 OS 이모지를 사용하지 않고, **Lucide 아이콘 + 17종의 2.5D 커스텀 인라인 SVG 의류/아바타 컴포넌트**로 제작되어 어디서나 깨짐 없이 즉시 렌더링됩니다.
+[![CI](https://github.com/microsoft/TypeScript/actions/workflows/ci.yml/badge.svg)](https://github.com/microsoft/TypeScript/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/typescript)
+[![Downloads](https://img.shields.io/npm/dm/typescript.svg)](https://www.npmjs.com/package/typescript)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/microsoft/TypeScript/badge)](https://securityscorecards.dev/viewer/?uri=github.com/microsoft/TypeScript)
 
----
 
-## 주요 화면 구성 (모바일 430px 프레임)
+[TypeScript](https://www.typescriptlang.org/) is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript. Try it out at the [playground](https://www.typescriptlang.org/play/), and stay up to date via [our blog](https://blogs.msdn.microsoft.com/typescript) and [Twitter account](https://twitter.com/typescript).
 
-1. **화면 A — 29CM 상품 상세 페이지 (`29CM 상품`)**
-   - 미니멀 화이트(`#FFFFFF`) · 블랙 라인(`#111111`) 각진 에디토리얼 레이아웃
-   - `MARDI MERCREDI` `[단독] 노르딕 자카드 울 집업 가디건` (스튜디오 / 자카드 디테일 / 치수 스펙 3슬라이드 SVG)
-   - 우측 하단 모동숲 스타일 플로팅 버튼 `[아바타에 입혀보기]` 클릭 시 해당 상품이 착용된 상태로 피팅룸 즉시 진입
+Find others who are using TypeScript at [our community page](https://www.typescriptlang.org/community/).
 
-2. **화면 B — 모동숲 감성 아바타 피팅룸 (`피팅룸`)**
-   - 크림 베이지(`#F8F5EC`) · 카드(`#FFFDF9`) · 민트(`#78D5B3`) · 커스터드 옐로우(`#F6D76B`) · 다크 브라운(`#4A3F35`)
-   - **상단 프리뷰 스테이지 2모드 전환**: `[아바타 착용]` (2.5등신 SD 레이어링 + 피부톤/헤어/표정 꾸미기 팝업) ↔ `[OOTD 보드]` (착장 플랫레이 보드)
-   - **하단 옷장 드로어**: `[구매한 옷]` / `[찜한 옷]` / `[최근 본 옷]` 탭 + 카테고리 필터 + 17종 의류 커스텀 SVG + 꼬리 말풍선 가격/브랜드 툴팁
+## Installing
 
-3. **화면 C — `#추구미` 피드 (`#추구미`)**
-   - 2열 그리드 유저 아바타 코디 카드 6종 (`#연말노르딕룩`, `#성수동카페룩`, `#꾸안꾸미니멀`, `#프렌치시크`, `#빈티지캐주얼`, `#모던테일러드`)
-   - 카드 클릭 시 착용한 29CM 아이템 목록 모달 열림 & `[내 아바타에 그대로 입혀보기]` 원탭 일괄 적용
-
----
-
-## 로컬 실행 방법
+For the latest stable version:
 
 ```bash
-npm install
-npm run dev
+npm install -D typescript
 ```
 
-프로덕션 빌드 확인:
+For our nightly builds:
 
 ```bash
-npm run build
-npm run preview
+npm install -D typescript@next
 ```
 
----
+## Contribute
 
-## GitHub에 올려서 바로 웹으로 실행하기 (GitHub Pages 자동 배포)
+There are many ways to [contribute](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md) to TypeScript.
+* [Submit bugs](https://github.com/microsoft/TypeScript/issues) and help us verify fixes as they are checked in.
+* Review the [source code changes](https://github.com/microsoft/TypeScript/pulls).
+* Engage with other TypeScript users and developers on [StackOverflow](https://stackoverflow.com/questions/tagged/typescript).
+* Help each other in the [TypeScript Community Discord](https://discord.gg/typescript).
+* Join the [#typescript](https://twitter.com/search?q=%23TypeScript) discussion on Twitter.
+* [Contribute bug fixes](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md).
 
-이 프로젝트에는 `.github/workflows/deploy.yml`과 상대 경로 빌드 설정(`base: './'`)이 이미 구성되어 있습니다.
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see
+the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com)
+with any additional questions or comments.
 
-1. GitHub에서 새 저장소(Repository)를 생성합니다.
-2. 이 폴더를 GitHub 저장소의 `main` 브랜치로 푸시(또는 파일 업로드)합니다.
-   ```bash
-   git remote add origin https://github.com/<내아이디>/<저장소이름>.git
-   git push -u origin main
-   ```
-3. GitHub 저장소 상단 메뉴 **Settings → Pages → Build and deployment → Source**에서 **GitHub Actions**를 선택합니다.
-4. 약 1분 뒤 `https://<내아이디>.github.io/<저장소이름>/` 주소에서 바로 모바일/PC 브라우저로 실행할 수 있습니다.
+## Documentation
 
-> Vercel 또는 Netlify에 저장소를 연결해도 별도 설정 없이 즉시 자동 배포됩니다.
+*  [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+*  [Programming handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+*  [Homepage](https://www.typescriptlang.org/)
 
----
+## Roadmap
 
-## Tech Stack
-
-- React 18 + TypeScript
-- Vite 5
-- Tailwind CSS 3
-- Lucide React + Custom Inline SVG Illustrations
+For details on our planned features and future direction, please refer to our [roadmap](https://github.com/microsoft/TypeScript/wiki/Roadmap).
